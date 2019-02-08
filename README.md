@@ -9,7 +9,7 @@ golang hooks for [http://pre-commit.com/](http://pre-commit.com/)
 Add this to your `.pre-commit-config.yaml`
 
 ```
-    - repo: git://github.com/jcchavezs/pre-commit-golang
+    - repo: git://github.com/delbao/pre-commit-golang
       sha: HEAD
       hooks:
         - id: go-fmt
@@ -19,6 +19,7 @@ Add this to your `.pre-commit-config.yaml`
         - id: no-go-testing
         - id: gometalinter
         - id: govendor-status
+        - id: go-imports
 ```
 
 ## Available hooks
@@ -32,3 +33,4 @@ Add this to your `.pre-commit-config.yaml`
   developers to use a different testing framework.
 - `gometalinter`: Runs `gometalinter [--arg1=value1 ...] ./...`. Use the arguments for setting a [configuration file](https://github.com/alecthomas/gometalinter#configuration-file). **It is highly recommended to include `--vendor` for exclude `vendor` folder and `--errors` flags to avoid warnings**
 - `govendor-status`: Runs `govendor status` to verify the status of the vendoring, requires golang.
+- `go-imports`: Runs `goimports`, requres golang

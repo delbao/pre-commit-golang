@@ -43,3 +43,9 @@
     files: '\.go$'
     language: 'script'
     description: "Runs `govendor status` to verify the status of the vendoring, requires govendor"
+-   id: go-imports
+    name: 'go imports'
+    entry: run-go-imports.sh
+    files: '\.go$'
+    language: 'script'
+    description: "Runs `goimports`, requires golang"
